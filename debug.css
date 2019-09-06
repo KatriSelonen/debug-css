@@ -40,7 +40,6 @@ input[type="number"]:not([max]) ~ *:not(area):not(base):not(br):not(col):not(emb
 *:not(img):not(iframe)[width]:after, /* Acceptable for transitional doctypes, but should probably be relegated to CSS */
 *:not(img):not(iframe)[height]:after,
 *[border]:after,
-*:not(area):not(base):not(br):not(col):not(embed):not(hr):not(iframe):not(img):not(input):not(textarea):empty:after,
 *[title]:empty:after,
 a a:after,
 img:not([alt]) ~ *:not(area):not(base):not(br):not(col):not(embed):not(hr):not(iframe):not(img):not(input):first-of-type:before,
@@ -324,11 +323,6 @@ table[cellspacing]:after,
 *[border]:after {
   background: #ff8;
   content: 'Element has inline style';
-}
-
-*:not(area):not(base):not(br):not(col):not(embed):not(hr):not(iframe):not(img):not(input):not(textarea):empty:after {
-  background: #ff8;
-  content: 'Element is empty. Is this necessary?';
 }
 
 *[title]:empty:after {
@@ -661,7 +655,6 @@ table[cellspacing],
 *:not(img):not(iframe)[width],
 *:not(img):not(iframe)[height],
 *[border],
-*:not(area):not(base):not(br):not(col):not(embed):not(hr):not(iframe):not(img):not(input):not(textarea):empty,
 *[title]:empty,
 img:not([alt]),
 img[src='spacer.gif'],

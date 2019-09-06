@@ -44,7 +44,6 @@ input[type="number"]:not([max]) ~ *:not(area):not(base):not(br):not(col):not(emb
 *[title]:empty:after,
 a a:after,
 img:not([alt]) ~ *:not(area):not(base):not(br):not(col):not(embed):not(hr):not(iframe):not(img):not(input):first-of-type:before,
-img[alt=""] ~ *:not(area):not(base):not(br):not(col):not(embed):not(hr):not(iframe):not(img):not(input):first-of-type:before,
 img:not([src]) ~ *:not(area):not(base):not(br):not(col):not(embed):not(hr):not(iframe):not(img):not(input):first-of-type:before,
 img[src=""] ~ *:not(area):not(base):not(br):not(col):not(embed):not(hr):not(iframe):not(img):not(input):first-of-type:before,
 img[src="#"] ~ *:not(area):not(base):not(br):not(col):not(embed):not(hr):not(iframe):not(img):not(input):first-of-type:before,
@@ -346,12 +345,6 @@ img:not([alt])
   ~ *:not(area):not(base):not(br):not(col):not(embed):not(hr):not(iframe):not(img):not(input):first-of-type:before {
   background: #ff8;
   content: 'Image does not have an ALT attribute';
-}
-
-img[alt='']
-  ~ *:not(area):not(base):not(br):not(col):not(embed):not(hr):not(iframe):not(img):not(input):first-of-type:before {
-  background: #8f8;
-  content: 'Image has an empty ALT attribute. This image will not be read to screen readers.';
 }
 
 img:not([src])
@@ -780,7 +773,6 @@ marquee {
   outline: 5px solid #ff8;
 }
 
-img[alt=''],
 table[summary],
 table > *:first-child:not(caption),
 table th:not([scope]),
